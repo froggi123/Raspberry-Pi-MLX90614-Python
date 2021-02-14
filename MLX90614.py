@@ -17,7 +17,7 @@ class MLX90614():
                 return self.bus.read_word_data(self.address, registerAddress)
             except IOError as e:
                 error = e
-                sleep(0.1)
+                time.sleep(0.1)
         raise error
 
     def valueToCelcius(self, value):
